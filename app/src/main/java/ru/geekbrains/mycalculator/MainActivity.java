@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText input_value;   //поле для ввода числа
     TextView operation;     //текстовое поле для вывода операции
@@ -66,6 +66,29 @@ public class MainActivity extends AppCompatActivity {
         button_subtraction = findViewById(R.id.button_subtraction);
         button_addition = findViewById(R.id.button_addition);
         button_equal_mark = findViewById(R.id.button_equal_mark);
+
+        button_1.setOnClickListener(this);
+        button_2.setOnClickListener(this);
+        button_3.setOnClickListener(this);
+        button_4.setOnClickListener(this);
+        button_5.setOnClickListener(this);
+        button_6.setOnClickListener(this);
+        button_7.setOnClickListener(this);
+        button_8.setOnClickListener(this);
+        button_9.setOnClickListener(this);
+        button_0.setOnClickListener(this);
+        button_point.setOnClickListener(this);
+        button_ac.setOnClickListener(this);
+        button_percent.setOnClickListener(this);
+        button_division.setOnClickListener(this);
+        button_multiplication.setOnClickListener(this);
+        button_subtraction.setOnClickListener(this);
+        button_addition.setOnClickListener(this);
+        button_equal_mark.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }
