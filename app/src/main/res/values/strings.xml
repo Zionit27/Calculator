@@ -17,4 +17,7 @@
     <string name="key_division">/</string>
     <string name="key_percent">%</string>
     <string name="key_equal_mark">=</string>
+    <string name="answer_text">answer</string>
+    <string name="operation">operation</string>
+    <string name="enter_number">enter number</string>
 </resources>
