@@ -20,6 +20,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="end"
             android:text="0"
+            android:textColor="#d1e231"
             android:inputType="phone"
             android:textSize="@dimen/button_text" />
 
@@ -32,6 +33,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/operation"
+            android:textColor="#d1e231"
             android:textSize="@dimen/button_text" />
 
         <TextView
@@ -43,6 +45,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/answer_text"
+            android:textColor="#d1e231"
             android:textSize="@dimen/button_text" />
 
         <Space
