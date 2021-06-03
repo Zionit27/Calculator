@@ -43,5 +43,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        answer = findViewById(R.id.answer);
+        input_value = findViewById(R.id.input_value);
+        operation = findViewById(R.id.operation);
+
+        button_1 = findViewById(R.id.button_1);
+        button_2 = findViewById(R.id.button_2);
+        button_3 = findViewById(R.id.button_3);
+        button_4 = findViewById(R.id.button_4);
+        button_5 = findViewById(R.id.button_5);
+        button_6 = findViewById(R.id.button_6);
+        button_7 = findViewById(R.id.button_7);
+        button_8 = findViewById(R.id.button_8);
+        button_9 = findViewById(R.id.button_9);
+        button_0 = findViewById(R.id.button_0);
+        button_point = findViewById(R.id.button_point);
+        button_ac = findViewById(R.id.button_ac);
+        button_percent = findViewById(R.id.button_percent);
+        button_division = findViewById(R.id.button_division);
+        button_multiplication = findViewById(R.id.button_multiplication);
+        button_subtraction = findViewById(R.id.button_subtraction);
+        button_addition = findViewById(R.id.button_addition);
+        button_equal_mark = findViewById(R.id.button_equal_mark);
+
     }
 }
