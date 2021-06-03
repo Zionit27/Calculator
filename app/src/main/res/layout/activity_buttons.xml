@@ -11,6 +11,31 @@
         android:layout_gravity="center"
         android:columnCount="4">
 
+        <TextView
+            android:id="@+id/operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:textSize="@dimen/button_text" />
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:textSize="@dimen/button_text" />
+
+        <Space
+            android:layout_height="20dp"
+            android:layout_column="0"
+            android:layout_columnSpan="4" />
+
         <Button
             android:id="@+id/button_ac"
             android:layout_width="wrap_content"
