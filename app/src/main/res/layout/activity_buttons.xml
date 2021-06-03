@@ -20,7 +20,6 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="end"
             android:inputType="phone"
-            android:text="@string/enter_number"
             android:textSize="@dimen/button_text" />
 
         <TextView
@@ -54,14 +53,10 @@
             android:id="@+id/button_ac"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
             android:text="ac"
-            android:textSize="@dimen/button_text" />
-
-        <Button
-            android:id="@+id/button_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="del"
             android:textSize="@dimen/button_text" />
 
         <Button
