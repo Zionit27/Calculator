@@ -20,4 +20,5 @@
     <string name="answer_text">answer</string>
     <string name="operation">operation</string>
     <string name="enter_number">enter number</string>
+    <string name="divided_zero_text">cannot be divided by zero</string>
 </resources>

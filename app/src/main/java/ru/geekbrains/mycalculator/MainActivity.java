@@ -12,20 +12,14 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Calculation calculation;
+
     EditText input_value;   //поле для ввода числа
     TextView operation;     //текстовое поле для вывода операции
     TextView answer;        //текстовое поле для вывода ответа
 
-    Button button_1;
-    Button button_2;
-    Button button_3;
-    Button button_4;
-    Button button_5;
-    Button button_6;
-    Button button_7;
-    Button button_8;
-    Button button_9;
-    Button button_0;
+    private final int[] numberButtonIds = new int[]{R.id.button_0, R.id.button_1, R.id.button_2, R.id.button_3,
+            R.id.button_4, R.id.button_5, R.id.button_6, R.id.button_7, R.id.button_8, R.id.button_9};
     Button button_point;
     Button button_ac;
     Button button_percent;
@@ -37,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     double num1 = 0;
     double num2 = 0;
-    double calc = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,16 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         input_value = findViewById(R.id.input_value);
         operation = findViewById(R.id.operation);
 
-        button_1 = findViewById(R.id.button_1);
-        button_2 = findViewById(R.id.button_2);
-        button_3 = findViewById(R.id.button_3);
-        button_4 = findViewById(R.id.button_4);
-        button_5 = findViewById(R.id.button_5);
-        button_6 = findViewById(R.id.button_6);
-        button_7 = findViewById(R.id.button_7);
-        button_8 = findViewById(R.id.button_8);
-        button_9 = findViewById(R.id.button_9);
-        button_0 = findViewById(R.id.button_0);
+        setNumberButtonListeners();
         button_point = findViewById(R.id.button_point);
         button_ac = findViewById(R.id.button_ac);
         button_percent = findViewById(R.id.button_percent);
@@ -67,16 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_addition = findViewById(R.id.button_addition);
         button_equal_mark = findViewById(R.id.button_equal_mark);
 
-        button_1.setOnClickListener(this);
-        button_2.setOnClickListener(this);
-        button_3.setOnClickListener(this);
-        button_4.setOnClickListener(this);
-        button_5.setOnClickListener(this);
-        button_6.setOnClickListener(this);
-        button_7.setOnClickListener(this);
-        button_8.setOnClickListener(this);
-        button_9.setOnClickListener(this);
-        button_0.setOnClickListener(this);
         button_point.setOnClickListener(this);
         button_ac.setOnClickListener(this);
         button_percent.setOnClickListener(this);
@@ -89,29 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.button_1) {
-            input_value.append("1");
-        } else if (v.getId() == R.id.button_2) {
-            input_value.append("2");
-        } else if (v.getId() == R.id.button_3) {
-            input_value.append("3");
-        } else if (v.getId() == R.id.button_4) {
-            input_value.append("4");
-        } else if (v.getId() == R.id.button_5) {
-            input_value.append("5");
-        } else if (v.getId() == R.id.button_6) {
-            input_value.append("6");
-        } else if (v.getId() == R.id.button_7) {
-            input_value.append("7");
-        } else if (v.getId() == R.id.button_8) {
-            input_value.append("8");
-        } else if (v.getId() == R.id.button_9) {
-            input_value.append("9");
-        } else if (v.getId() == R.id.button_0) {
-            input_value.append("0");
-        } else if (v.getId() == R.id.button_point) {
-            input_value.append(".");
-        } else if (v.getId() == R.id.button_ac) {
+        if (v.getId() == R.id.button_ac) {
             input_value.setText("0");
             operation.setText("");
             answer.setText("");
@@ -135,30 +87,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             operation.setText("+");
             initNum1();
             input_value.setText("0");
+        } else if (v.getId() == R.id.button_point) {
+            input_value.append(".");
         } else if (v.getId() == R.id.button_equal_mark) {
             num2 = Double.parseDouble(input_value.getText().toString());
             input_value.setText("0");
-            if (operation.getText() == "%") {
-                calc = num1 * num2 / 100;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "/" && num2 != 0) {
-                calc = num1 / num2;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "/" && num2 == 0) {
-                answer.setText("cannot be divided by zero");
-            } else if (operation.getText() == "*") {
-                calc = num1 * num2;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "-") {
-                calc = num1 - num2;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "+") {
-                calc = num1 + num2;
-                answer.setText("" + calc);
-            }
+            showAnswer();
         }
     }
-    public void initNum1 () {
+
+    private void showAnswer() {
+        if (operation.getText() == "/" && num2 == 0) {
+            answer.setText(R.string.divided_zero_text);
+        } else {
+            answer.setText("" + calculation.operationCalc(num1, num2, operation));
+        }
+    }
+
+    private void initNum1() {
         num1 = Double.parseDouble(input_value.getText().toString());
+    }
+
+    private void setNumberButtonListeners() {
+        int i;
+        for (i = 0; i < 10; i++) {
+            findViewById(numberButtonIds[i]).setOnClickListener(v -> {
+                Button btn = (Button) v;
+                input_value.append(btn.getText().toString());
+            });
+        }
     }
 }
