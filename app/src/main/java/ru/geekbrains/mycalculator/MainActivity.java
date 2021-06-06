@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showAnswer() {
         if (operation.getText() == "/" && num2 == 0) {
-            answer.setText("cannot be divided by zero");
+            answer.setText(R.string.divided_zero_text);
         } else {
             answer.setText("" + calculation.operationCalc(num1, num2, operation));
         }
