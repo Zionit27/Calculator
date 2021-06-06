@@ -62,29 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.button_1) {
-            input_value.append("1");
-        } else if (v.getId() == R.id.button_2) {
-            input_value.append("2");
-        } else if (v.getId() == R.id.button_3) {
-            input_value.append("3");
-        } else if (v.getId() == R.id.button_4) {
-            input_value.append("4");
-        } else if (v.getId() == R.id.button_5) {
-            input_value.append("5");
-        } else if (v.getId() == R.id.button_6) {
-            input_value.append("6");
-        } else if (v.getId() == R.id.button_7) {
-            input_value.append("7");
-        } else if (v.getId() == R.id.button_8) {
-            input_value.append("8");
-        } else if (v.getId() == R.id.button_9) {
-            input_value.append("9");
-        } else if (v.getId() == R.id.button_0) {
-            input_value.append("0");
-        } else if (v.getId() == R.id.button_point) {
-            input_value.append(".");
-        } else if (v.getId() == R.id.button_ac) {
+        if (v.getId() == R.id.button_ac) {
             input_value.setText("0");
             operation.setText("");
             answer.setText("");
