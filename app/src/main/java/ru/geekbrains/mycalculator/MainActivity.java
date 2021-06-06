@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Calculation calculation;
 
-    private String StringResultText = "0";
     EditText input_value;   //поле для ввода числа
     TextView operation;     //текстовое поле для вывода операции
     TextView answer;        //текстовое поле для вывода ответа
