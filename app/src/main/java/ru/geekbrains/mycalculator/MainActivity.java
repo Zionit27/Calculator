@@ -117,23 +117,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             answer.setText("");
         } else if (v.getId() == R.id.button_percent) {
             operation.setText("%");
-            num1 = Float.parseFloat(input_value.getText().toString());
+            initNum1();
             input_value.setText("0");
         } else if (v.getId() == R.id.button_division) {
             operation.setText("/");
-            num1 = Float.parseFloat(input_value.getText().toString());
+            initNum1();
             input_value.setText("0");
         } else if (v.getId() == R.id.button_multiplication) {
             operation.setText("*");
-            num1 = Double.parseDouble(input_value.getText().toString());
+            initNum1();
             input_value.setText("0");
         } else if (v.getId() == R.id.button_subtraction) {
             operation.setText("-");
-            num1 = Double.parseDouble(input_value.getText().toString());
+            initNum1();
             input_value.setText("0");
         } else if (v.getId() == R.id.button_addition) {
             operation.setText("+");
-            num1 = Double.parseDouble(input_value.getText().toString());
+            initNum1();
             input_value.setText("0");
         } else if (v.getId() == R.id.button_equal_mark) {
             num2 = Double.parseDouble(input_value.getText().toString());
@@ -157,5 +157,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 answer.setText("" + calc);
             }
         }
+    }
+    public void initNum1 () {
+        num1 = Double.parseDouble(input_value.getText().toString());
     }
 }
