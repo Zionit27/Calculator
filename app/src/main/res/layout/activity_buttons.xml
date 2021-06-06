@@ -11,18 +11,56 @@
         android:layout_gravity="center"
         android:columnCount="4">
 
+        <EditText
+            android:id="@+id/input_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="end"
+            android:text="0"
+            android:textColor="#d1e231"
+            android:inputType="phone"
+            android:textSize="@dimen/button_text" />
+
+        <TextView
+            android:id="@+id/operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/operation"
+            android:textColor="#d1e231"
+            android:textSize="@dimen/button_text" />
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/answer_text"
+            android:textColor="#d1e231"
+            android:textSize="@dimen/button_text" />
+
+        <Space
+            android:layout_height="20dp"
+            android:layout_column="0"
+            android:layout_columnSpan="4" />
+
         <Button
             android:id="@+id/button_ac"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
             android:text="ac"
-            android:textSize="@dimen/button_text" />
-
-        <Button
-            android:id="@+id/button_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="del"
             android:textSize="@dimen/button_text" />
 
         <Button
