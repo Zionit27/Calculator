@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void initNum1() {
+    private void initNum1() {
         num1 = Double.parseDouble(input_value.getText().toString());
     }
 
