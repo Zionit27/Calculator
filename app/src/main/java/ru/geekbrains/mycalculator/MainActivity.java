@@ -12,6 +12,9 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Calculation calculation;
+
+    private String StringResultText = "0";
     EditText input_value;   //поле для ввода числа
     TextView operation;     //текстовое поле для вывода операции
     TextView answer;        //текстовое поле для вывода ответа
@@ -29,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     double num1 = 0;
     double num2 = 0;
-    double calc = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,27 +88,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             operation.setText("+");
             initNum1();
             input_value.setText("0");
+        } else if (v.getId() == R.id.button_point) {
+            input_value.append(".");
         } else if (v.getId() == R.id.button_equal_mark) {
             num2 = Double.parseDouble(input_value.getText().toString());
             input_value.setText("0");
-            if (operation.getText() == "%") {
-                calc = num1 * num2 / 100;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "/" && num2 != 0) {
-                calc = num1 / num2;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "/" && num2 == 0) {
-                answer.setText("cannot be divided by zero");
-            } else if (operation.getText() == "*") {
-                calc = num1 * num2;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "-") {
-                calc = num1 - num2;
-                answer.setText("" + calc);
-            } else if (operation.getText() == "+") {
-                calc = num1 + num2;
-                answer.setText("" + calc);
-            }
+            showAnswer();
+        }
+    }
+
+    private void showAnswer() {
+        if (operation.getText() == "/" && num2 == 0) {
+            answer.setText("cannot be divided by zero");
+        } else {
+            answer.setText("" + calculation.operationCalc(num1, num2, operation));
         }
     }
 
@@ -123,5 +118,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
         }
     }
-
 }
