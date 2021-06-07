@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MaterialComponents.DayNight.DarkActionBar.MyStyle">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:textColor">@color/lime</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+</resources>
