@@ -17,8 +17,10 @@
     <string name="key_division">/</string>
     <string name="key_percent">%</string>
     <string name="key_equal_mark">=</string>
+    <string name="input_value_text">0</string>
     <string name="answer_text">answer</string>
-    <string name="operation">operation</string>
+    <string name="operation_text">operation</string>
     <string name="enter_number">enter number</string>
     <string name="divided_zero_text">cannot be divided by zero</string>
+    <string name="key_all_clear">ac</string>
 </resources>
