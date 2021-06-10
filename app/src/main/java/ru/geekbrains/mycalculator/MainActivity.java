@@ -103,10 +103,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void settingTheme() {
-
-    }
-
     private void showAnswer() {
         if (operation.getText() == "/" && num2 == 0) {
             answer.setText(R.string.divided_zero_text);

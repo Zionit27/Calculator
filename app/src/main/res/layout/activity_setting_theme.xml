@@ -8,7 +8,7 @@
     tools:context=".SettingThemeActivity">
 
     <TextView
-        android:id="@+id/operation"
+        android:id="@+id/theme_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
