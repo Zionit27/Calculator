@@ -2,6 +2,7 @@ package ru.geekbrains.mycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button_subtraction;
     Button button_addition;
     Button button_equal_mark;
+    Button button_settings;
 
     double num1 = 0;
     double num2 = 0;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_subtraction = findViewById(R.id.button_subtraction);
         button_addition = findViewById(R.id.button_addition);
         button_equal_mark = findViewById(R.id.button_equal_mark);
+        button_settings = findViewById(R.id.button_settings);
 
         button_point.setOnClickListener(this);
         button_ac.setOnClickListener(this);
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_subtraction.setOnClickListener(this);
         button_addition.setOnClickListener(this);
         button_equal_mark.setOnClickListener(this);
+        button_settings.setOnClickListener(this);
     }
 
     @Override
@@ -93,7 +97,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             num2 = Double.parseDouble(input_value.getText().toString());
             input_value.setText("0");
             showAnswer();
+        } else if (v.getId() == R.id.button_settings) {
+            Intent runSettings = new Intent(MainActivity.this, SettingThemeActivity.class);
+            startActivity(runSettings);
         }
+    }
+
+    private void settingTheme() {
+
     }
 
     private void showAnswer() {
