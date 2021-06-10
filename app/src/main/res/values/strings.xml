@@ -24,4 +24,8 @@
     <string name="divided_zero_text">cannot be divided by zero</string>
     <string name="key_all_clear">ac</string>
     <string name="button_settings">set theme</string>
+    <string name="close_set">close</string>
+    <string name="replacement">replacement</string>
+    <string name="light">Light theme</string>
+    <string name="dark">Dark theme</string>
 </resources>
