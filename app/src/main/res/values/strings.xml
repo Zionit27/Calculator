@@ -25,7 +25,6 @@
     <string name="key_all_clear">ac</string>
     <string name="button_settings">set theme</string>
     <string name="close_set">close</string>
-    <string name="replacement">replacement</string>
-    <string name="light">Light theme</string>
-    <string name="dark">Dark theme</string>
+    <string name="light_theme">Light theme</string>
+    <string name="dark_theme">Dark theme</string>
 </resources>
