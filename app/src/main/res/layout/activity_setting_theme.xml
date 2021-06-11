@@ -7,35 +7,34 @@
     android:orientation="vertical"
     tools:context=".SettingThemeActivity">
 
-    <TextView
-        android:id="@+id/theme_text"
-        android:layout_width="match_parent"
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/light" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCancel">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_replace"
-            android:layout_width="wrap_content"
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialLight"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/teal_700"
-            android:text="@string/replacement"
-            android:textSize="@dimen/button_text" />
+            android:text="@string/light_theme" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_theme" />
+
+    </RadioGroup>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:backgroundTint="@color/teal_700"
             android:text="@string/close_set"
             android:textSize="@dimen/button_text" />
-    </LinearLayout>
 
 </LinearLayout>
