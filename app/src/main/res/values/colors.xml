@@ -13,4 +13,10 @@
     <color name="coral">#FF7F50</color>
     <color name="indigo">#4B0082</color>
     <color name="dark_blue">#00008B</color>
+    <color name="colorPrimary">#FF0000</color>
+    <color name="colorPrimaryDark">#0000FF</color>
+    <color name="colorAccent">#536DPE</color>
+
+
+
 </resources>

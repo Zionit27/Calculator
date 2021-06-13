@@ -23,4 +23,10 @@
     <string name="enter_number">enter number</string>
     <string name="divided_zero_text">cannot be divided by zero</string>
     <string name="key_all_clear">ac</string>
+    <string name="button_settings">set theme</string>
+    <string name="close_set">close</string>
+    <string name="my_style">My style</string>
+    <string name="material_light">Material light</string>
+    <string name="material_light_action_bar_dark">Material light action bar dark</string>
+    <string name="material_dark">Material dark</string>
 </resources>
